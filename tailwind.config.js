@@ -6,7 +6,23 @@ module.exports = {
     './app/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'nth-gray-900': '#161819',
+        'nth-gray-800': '#2D3134',
+        'nth-gray-700': '#404040',
+        'nth-gray-600': '#5C646B',
+        'nth-gray-500': '#737373',
+        'nth-gray-400': '#A6A6A6',
+        'nth-gray-300': '#B3B3B3',
+        'nth-gray-200': '#C5CACD',
+        'nth-green-500': '#43F46A',
+        'nth-red-500': '#F45943',
+      },
+      fontFamily: {
+        display: ['Inter', 'ui-sans-serif', 'system-ui'],
+      },
+    },
   },
   plugins: [],
-}
+};
