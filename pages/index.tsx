@@ -1,8 +1,10 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import Image from 'next/image';
-import { Carousel } from '../components/Home/Carousel';
-import { Header } from '../components/Home/Header';
+import { ScrolldownIndicator } from '../components/commons/ScrolldownIndicator';
+import { Carousel } from '../components/home/Carousel';
+import { Header } from '../components/home/Header';
+
+import categories from '../tmp/categories.json';
 
 const Home: NextPage = () => {
   return (
@@ -12,13 +14,10 @@ const Home: NextPage = () => {
       </Head>
       <Header />
       <main>
-        <Carousel />
-        <Image
-          src="/assets/scrolldown.svg"
-          alt="Ícone indicando para navegar a página para baixo"
-          width={5}
-          height={5}
-        />
+        {categories.map((category) => (
+          <Carousel key={category.title} carousel={category} />
+        ))}
+        <ScrolldownIndicator />
       </main>
       <footer></footer>
     </>

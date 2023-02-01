@@ -1,0 +1,18 @@
+[
+  {
+    "name": "Eclipse",
+    "img": {
+      "url": "/tmp/eclipse.png",
+      "alt": "Foto do Smartphone Eclipse"
+    },
+    "bgColor": "#F78473"
+  },
+  {
+    "name": "Sky",
+    "img": {
+      "url": "/tmp/sky.png",
+      "alt": "Foto do Smartphone Sky"
+    },
+    "bgColor": "#9EB4FA"
+  }
+]

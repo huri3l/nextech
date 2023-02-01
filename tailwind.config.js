@@ -6,6 +6,10 @@ module.exports = {
     './app/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
+    screens: {
+      nthxs: '390px',
+      nth2xs: '350px',
+    },
     extend: {
       colors: {
         'nth-gray-900': '#161819',
@@ -21,6 +25,13 @@ module.exports = {
       },
       fontFamily: {
         display: ['Inter', 'ui-sans-serif', 'system-ui'],
+      },
+      spacing: {
+        0.5: '0.125rem',
+        80: '20rem',
+        104: '26rem',
+        108: '27rem',
+        250: '62.5rem',
       },
     },
   },
