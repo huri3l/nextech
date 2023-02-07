@@ -28,7 +28,7 @@ export const Carousel = ({ carousel }: CarouselProps) => {
   };
 
   return (
-    <div className="text-white overflow-x-hidden nthxs:mt-24">
+    <div className="text-white overflow-x-hidden mt-12 nthxs:mt-24">
       <h3 className="text-center text-2xl uppercase">{title}</h3>
       <hr className="mx-auto w-36 mt-2 h-0.5 bg-white" />
       <div className="max-w-2xl mx-auto mt-2 nthxs:mt-8">
