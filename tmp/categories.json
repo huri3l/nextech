@@ -19,5 +19,26 @@
         "bgColor": "#9EB4FA"
       }
     ]
+  },
+  {
+    "title": "Categorias",
+    "slides": [
+      {
+        "name": "Notebooks",
+        "img": {
+          "url": "/tmp/tremor.png",
+          "alt": "Foto do Notebook Tremor"
+        },
+        "bgColor": "#B3B3B3"
+      },
+      {
+        "name": "Smart\nphones",
+        "img": {
+          "url": "/tmp/sky.png",
+          "alt": "Foto do Smartphone Sky"
+        },
+        "bgColor": "#9EB4FA"
+      }
+    ]
   }
 ]

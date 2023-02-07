@@ -10,13 +10,13 @@ export const SlideContent = ({ name, img, bgColor }: CarouselSlideProps) => {
       />
       <div className="relative h-full">
         <Image
-          className="object-cover top-1/2 left-1/2 transform -translate-x-10 -translate-y-14 nthxs:-translate-x-8 nthxs:-translate-y-20"
+          className="object-cover overflow-visible top-1/2 left-1/2 transform -translate-x-10 -translate-y-14 nthxs:-translate-x-8 nthxs:-translate-y-20"
           src={img.url}
           alt={img.alt}
           fill
         />
       </div>
-      <h4 className="font-bold drop-shadow-md uppercase text-4xl absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+      <h4 className="text-center font-bold drop-shadow-md uppercase text-4xl absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
         {name}
       </h4>
     </div>
