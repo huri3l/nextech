@@ -1,45 +1,35 @@
 import Image from 'next/image';
-import { useEffect, useState } from 'react';
+import { useScroll } from '../../../hooks/useScroll';
+
+interface ScrollToTopButtonProps {
+  scrollToTop: () => void;
+}
 
 export const ScrollAux = () => {
-  const [scrollPosition, setScrollPosition] = useState(0);
+  const { scrollPosition, scrollToTop } = useScroll();
 
-  const trackScroll = () => {
-    const position = window.pageYOffset;
-    setScrollPosition(position);
-  };
+  if (scrollPosition === 0) return <ScrolldownIndicator />;
 
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth',
-    });
-  };
+  if (scrollPosition > 400) return <ScrollToTopButton scrollToTop={scrollToTop} />;
 
-  useEffect(() => {
-    window.addEventListener('scroll', trackScroll, { passive: true });
+  return null;
+};
 
-    return () => {
-      window.removeEventListener('scroll', trackScroll);
-    };
-  }, []);
+const ScrollToTopButton = ({ scrollToTop }: ScrollToTopButtonProps) => {
+  return (
+    <button onClick={scrollToTop} className="fixed bottom-0 right-0 mb-4 mr-4 p-2 z-20">
+      <Image
+        src="/assets/chevron-circle-up.svg"
+        alt="Clique para navegar ao topo da página"
+        width={40}
+        height={5}
+        className="bg-nth-gray-900 rounded-full"
+      />
+    </button>
+  );
+};
 
-  if (scrollPosition > 400) {
-    return (
-      <button onClick={scrollToTop} className="fixed bottom-0 right-0 mb-4 mr-4 p-2 z-20">
-        <Image
-          src="/assets/chevron-circle-up.svg"
-          alt="Clique para navegar ao topo da página"
-          width={40}
-          height={5}
-          className="bg-nth-gray-900 rounded-full"
-        />
-      </button>
-    );
-  }
-
-  if (scrollPosition > 0) return null;
-
+const ScrolldownIndicator = () => {
   return (
     <div className="absolute bottom-0 right-0 pb-4 pr-4">
       <Image
