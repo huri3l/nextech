@@ -14,7 +14,7 @@ const Home: NextPage = () => {
       <Head>
         <title>NexTech</title>
       </Head>
-      <Header />
+      <Header dynamic={true} />
       <main>
         {categories.map((category) => (
           <Carousel key={category.title} carousel={category} />

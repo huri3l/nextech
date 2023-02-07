@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 
 export const useScroll = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const trackScroll = () => {
     const position = window.pageYOffset;
@@ -23,8 +24,17 @@ export const useScroll = () => {
     };
   }, []);
 
+  useEffect(() => {
+    if (scrollPosition > 0) {
+      setIsScrolled(true);
+    } else {
+      setIsScrolled(false);
+    }
+  }, [scrollPosition]);
+
   return {
     scrollPosition,
     scrollToTop,
+    isScrolled,
   };
 };
