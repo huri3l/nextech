@@ -17,7 +17,7 @@ const DynamicHeader = () => {
     <header className="sticky top-0 z-20 pb-2 flex flex-col items-center bg-nth-gray-900 text-white uppercase transition-all">
       <h1
         className={`transition-all ${
-          !isScrolled ? 'font-bold mt-12 nth2xs:text-5xl nthxs:text-6xl' : 'font-bold my-2 text-4xl'
+          !isScrolled ? 'font-bold mt-12 text-5xl nthxs:text-6xl' : 'font-bold my-2 text-4xl'
         }`}
       >
         NexTech
