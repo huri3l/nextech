@@ -17,12 +17,11 @@ export const ScrollAux = () => {
 
 const ScrollToTopButton = ({ scrollToTop }: ScrollToTopButtonProps) => {
   return (
-    <button onClick={scrollToTop} className="fixed bottom-0 right-0 mb-4 mr-4 p-2 z-20">
+    <button onClick={scrollToTop} className="fixed bottom-18 right-0 mb-4 mr-6 p-2 z-20 w-10 h-10">
       <Image
         src="/assets/chevron-circle-up.svg"
         alt="Clique para navegar ao topo da página"
-        width={40}
-        height={5}
+        fill
         className="bg-nth-gray-900 rounded-full"
       />
     </button>
@@ -31,12 +30,11 @@ const ScrollToTopButton = ({ scrollToTop }: ScrollToTopButtonProps) => {
 
 const ScrolldownIndicator = () => {
   return (
-    <div className="absolute bottom-0 right-0 pb-4 pr-4">
+    <div className="absolute bottom-16 right-0 pb-4 pr-4 w-20 h-20">
       <Image
         src="/assets/scrolldown.svg"
         alt="Ícone indicando para navegar a página para baixo"
-        width={40}
-        height={5}
+        fill
         className="animate-bounce"
       />
     </div>
